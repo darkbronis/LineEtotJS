@@ -1095,7 +1095,7 @@ this._sendMessage(seq,"Kamu bukan admin");
 
       }
 
-        if(txt == 'help1') {
+        if(txt == 'help2') {
 	   if(isAdmin(seq.from) || isStaff(seq.from)) {
               this._sendMessage(seq, '●▬▬▬▬▬▬▬▬▬▬▬▬▬▬●\n♞♞♞ɆsᵽȺđȺ ŦɇȺm♞♞♞\n●▬▬▬▬▬▬▬▬▬▬▬▬▬▬●\n♞ Myid\n♞ Gift1\n♞ Halo\n♞ Help1\n♞ CreatorBot\n♞ Say [Jumlah] /[Text]\n♞ InfoGroup\n♞ GroupCreator\n♞ Tag1\n♞ Speed\n♞ setpoint1\n♞ check1\n♞ Status/Setting\n♞  reset read\n\n●▬▬▬▬▬▬▬▬▬▬▬▬▬▬●\n Staff Command\n●▬▬▬▬▬▬▬▬▬▬▬▬▬▬●\n♞ Berkumpul\n♞ Opengarganta[Membuka gerbang dimensi\n♞ Closegarganta[Menutup gerbang dimensi]\n♞ hueco mundo[Kembali ke Markas]\n♞ spam\n♞ Bankaimode On/Off\n♞ Cancel On/Off\n♞ LockInvite On/Off\n♞ LockUpdateGroup On/Off\n♞ LockJoin On/Off\n♞ LockCancel On/Off\n♞ Cero「@」[menghancurkan target dengan cero]\n♞ Kickall (bankaimode On Terlebih Dahulu)\n♞ Msg1\n♞ Bc On/Off\n♞ Bmsg On/Off\n\●▬▬▬▬▬▬▬▬▬▬▬▬▬▬●\nAdmin command\n●▬▬▬▬▬▬▬▬▬▬▬▬▬▬●\n♞ Ban\n♞ Unban\n♞ Mute\n♞ Unmute\n♞ add:staff\n♞ del:staff\n♞ BcGroup [Text]\n♞ AddContact\n♞ CreateGroup [Jumlah]-[Nama]/[Mid]\n\n●▬▬▬▬▬▬▬▬▬▬▬▬▬▬●\n♞♞♞ɆsᵽȺđȺ ŦɇȺm Ƀøŧ ♞♞♞\n●▬▬▬▬▬▬▬▬▬▬▬▬▬▬●');
 	   }
@@ -1190,7 +1190,7 @@ let { listMember } = await this.searchGroup(seq.to);
 
       }
 
-        if(txt == 'setpoint1') {
+        if(txt == 'setpoint2') {
 	   if(isAdmin(seq.from) || isStaff(seq.from)) {
             	this._sendMessage(seq, `Check point sudah di set!`);
             	this.removeReaderByGroup(seq.to);
@@ -1206,7 +1206,7 @@ let { listMember } = await this.searchGroup(seq.to);
         }  
 
 
-        if(txt == 'check1'){
+        if(txt == 'check2'){
 	   if(isAdmin(seq.from) || isStaff(seq.from)) {
 
             	let rec = await this.recheck(this.checkReader,seq.to);
@@ -1290,7 +1290,8 @@ let { listMember } = await this.searchGroup(seq.to);
         if(action.includes(txt)) {
             this.setState(seq)
         }
-	if(txt == 'Bankai' && isAdmin(seq.from)) {
+	    
+	if(txt == 'Ban kai' && isAdmin(seq.from)) {
 		this.sendMessage(seq,"Bankai mode sudah aktif");
 		
 	}
@@ -1373,7 +1374,7 @@ let { listMember } = await this.searchGroup(seq.to);
 	   }
 	}
 
-        if(cmd == 'lirik' && isAdmin(seq.from)) {
+        if(cmd == 'lirik' || cmd == 'lirik1' && isAdmin(seq.from)) {
             let lyrics = await this._searchLyrics(payload);
             this._sendMessage(seq,lyrics);
         }
