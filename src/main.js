@@ -1320,6 +1320,12 @@ let { listMember } = await this.searchGroup(seq.to);
             await this._acceptGroupInvitationByTicket(id,ticketId);
         }
 
+	    
+           if(cmd == 'Apakah') {
+              let optreply_jawab=['Iya','Bisa Jadi','Tidak','Mana Saya Tahu, bego']
+              let random3 = Math.floor(Math.random()*optreply_jawab.length);
+              let reply_jawab=(optreply_jawab[random3]);                            this._sendMessage(seq, `${reply_jawab}`);
+	   }
        
         if(cmd == 'cero' && isAdmin(seq.from)){
            let target = payload.replace('@','');
